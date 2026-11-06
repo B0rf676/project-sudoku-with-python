@@ -8,7 +8,15 @@ class Sudoku:
 
     def __str__(self) -> str:
         s = ""
-        # YOUR CODE HERE
+
+        for r in range(1, 10):
+            for c in range(1, 10):
+                s += str(self.sudoku[(r, c)]) + " "
+                if c in (3, 6):
+                    s += ' '
+            s += '\n'
+            if r in (3, 6):
+                s += '\n'
         return s
 
     @classmethod
